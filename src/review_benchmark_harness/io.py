@@ -17,7 +17,8 @@ def ensure_parent(path: Path) -> None:
 def write_text(path: str, content: str) -> None:
     target = Path(path)
     ensure_parent(target)
-    target.write_text(content, encoding="utf-8", newline="\n")
+    with target.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(content)
 
 
 def write_json(path: str, payload: Any) -> None:
