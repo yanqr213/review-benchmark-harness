@@ -1,0 +1,9 @@
+diff --git a/web/auth.ts b/web/auth.ts
+--- a/web/auth.ts
++++ b/web/auth.ts
+@@ -23,3 +23,5 @@ export function completeLogin(req, res) {
+     const next = req.query.next;
+-    res.redirect("/dashboard");
++    if (next) {
++        return res.redirect(next);
++    }

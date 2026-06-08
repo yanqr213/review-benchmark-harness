@@ -1,0 +1,12 @@
+{
+  "findings": [
+    {
+      "file": "web/auth.ts",
+      "line": 27,
+      "severity": "critical",
+      "rule_id": "web.open-redirect",
+      "title": "Unsanitized redirect target",
+      "message": "The redirect target comes from user input without allow-list validation."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+diff --git a/src/worker.py b/src/worker.py
+--- a/src/worker.py
++++ b/src/worker.py
+@@ -10,5 +10,8 @@ def process(job):
+     try:
+         run(job)
+         return True
+-    except ValueError:
+-        raise
++    except Exception:
++        logger.info("job failed but continuing")
++        return True

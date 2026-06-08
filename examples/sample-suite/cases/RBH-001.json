@@ -1,0 +1,19 @@
+{
+  "case_id": "RBH-001",
+  "title": "Swallowed exception in worker",
+  "patch": "patches/RBH-001.diff",
+  "expected_findings": [
+    {
+      "file": "src/worker.py",
+      "line": 14,
+      "severity": "warning",
+      "rule_id": "python.swallowed-exception",
+      "title": "Broad exception is swallowed",
+      "message": "The patch catches Exception and returns success-like behavior."
+    }
+  ],
+  "metadata": {
+    "language": "python",
+    "category": "reliability"
+  }
+}

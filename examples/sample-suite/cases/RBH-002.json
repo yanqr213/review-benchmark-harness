@@ -1,0 +1,19 @@
+{
+  "case_id": "RBH-002",
+  "title": "Open redirect via user-controlled next parameter",
+  "patch": "patches/RBH-002.diff",
+  "expected_findings": [
+    {
+      "file": "web/auth.ts",
+      "line": 27,
+      "severity": "error",
+      "rule_id": "web.open-redirect",
+      "title": "Unsanitized redirect target",
+      "message": "The patch redirects to a user-controlled URL without validation."
+    }
+  ],
+  "metadata": {
+    "language": "typescript",
+    "category": "security"
+  }
+}

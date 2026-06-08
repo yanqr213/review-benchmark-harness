@@ -1,0 +1,8 @@
+{
+  "name": "sample-suite",
+  "version": 1,
+  "cases": [
+    "RBH-001",
+    "RBH-002"
+  ]
+}
